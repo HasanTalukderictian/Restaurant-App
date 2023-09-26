@@ -1,4 +1,5 @@
 import React from 'react';
+import imgIcon from '../../assests/logo.png';
 
 const Navbar = () => {
     const navOption = <>
@@ -10,7 +11,7 @@ const Navbar = () => {
     </>
     return (
         <>
-            <div className="navbar bg-base-100">
+            <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -20,6 +21,7 @@ const Navbar = () => {
                                  {navOption}
                         </ul>
                     </div>
+                    <img src={imgIcon}  className='w-15 h-11' alt="" />
                     <a className="btn btn-ghost normal-case text-xl">Baton Rouge</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
@@ -27,7 +29,7 @@ const Navbar = () => {
                     {navOption}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end px-20">
                     <a className="btn">Button</a>
                 </div>
             </div>
