@@ -5,6 +5,7 @@ import Types from '../Types/Types';
 import MenuCategory from '../MenuCategory/MenuCategory';
 import Featured from '../Featured/Featured';
 import SpecialDish from '../SpecialDish/SpecialDish';
+import Reviews from './Testimonial/Reviews';
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
            <MenuCategory></MenuCategory>
            <Featured></Featured>
            <SpecialDish></SpecialDish>
+           <Reviews></Reviews>
         </div>
     );
 };
