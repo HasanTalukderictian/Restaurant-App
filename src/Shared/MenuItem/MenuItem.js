@@ -1,6 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const MenuItem = ({item}) => {
+const MenuItem = ({item, title }) => {
     const {image, price, name, recipe} = item;
     console.log(item);
     return (
@@ -12,7 +13,7 @@ const MenuItem = ({item}) => {
                 <h3 className='text-4xl text-green-500 '>{name}</h3>
                 <p className='my-2'>{recipe}</p>
                 <p className='text-yellow-500'>${price}</p>
-                <button className="btn btn-outline btn-warning">Order Now</button>
+               <Link to={`/order/${title}`}> <button className="btn btn-outline btn-warning">Order Now</button></Link>
             </div>
            </div>
         </div>

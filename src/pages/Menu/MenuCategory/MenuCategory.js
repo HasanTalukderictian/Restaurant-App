@@ -3,6 +3,7 @@ import MenuItem from '../../../Shared/MenuItem/MenuItem';
 import Covered from '../../../Shared/Cover/Covered';
 
 
+
 const MenuCategory = ({items, title, coverImage}) => {
     
    
@@ -16,9 +17,12 @@ const MenuCategory = ({items, title, coverImage}) => {
                 {
                     items.map(item =><MenuItem
                     key={item._id}
-                    item ={item}></MenuItem>)
+                    item ={item}
+                    title={title}></MenuItem>)
                 }
-             </div>
+             </div> 
+             
+             
         </div>
     );
 };

@@ -15,7 +15,7 @@ const MenuDesign = ({item}) => {
             </div>
            <div>
             <p className='text-yellow-400'>${price}</p>
-            <button className="btn btn-sm btn-warning">Order Now!</button>
+          
            </div>
         </div>
     );

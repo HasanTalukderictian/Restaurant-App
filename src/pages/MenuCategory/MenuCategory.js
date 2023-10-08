@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useMenu from '../../hooks/useMenu';
 import SectionTitle from '../../Components/SectionTitle';
 import MenuItem from '../../Shared/MenuItem/MenuItem';
+import { Link } from 'react-router-dom';
 
 const MenuCategory = () => {
     // const [menu] = useMenu();
@@ -36,7 +37,7 @@ const MenuCategory = () => {
                     ></MenuItem>)
                 }
             </div>
-
+           
         </section>
 
     );
