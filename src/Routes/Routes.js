@@ -6,6 +6,7 @@ import Main from "../Layouts/Main/Main";
 import Home from "../pages/Home/Home";
 import Menu from "../pages/Menu/Menu/Menu";
 import Order from "../pages/Order/Order/Order";
+import ContactUs from "../pages/Contact/ContactUs";
 
  export const router = createBrowserRouter([
     {
@@ -23,6 +24,10 @@ import Order from "../pages/Order/Order/Order";
         {
           path:'order/:category',
           element:<Order></Order>
+        },
+        {
+          path:'contact',
+          element:<ContactUs></ContactUs>
         }
       ]
     },
