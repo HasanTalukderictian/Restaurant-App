@@ -1,15 +1,39 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import imgIcon from '../../assests/logo.png';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Providers/AuthProviders';
+import Swal from 'sweetalert2'
 
 const Navbar = () => {
+    
+    const {user, logout} = useContext(AuthContext);
+
+    const handleLogOut =() =>{
+
+        logout()
+        .then( () =>{})
+        .catch(error => console.log(error));
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Your work has been saved',
+            showConfirmButton: false,
+            timer: 1500
+          })
+    }
+
     const navOption = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/menu'>Our Menu</Link></li>
         <li><Link to='/order/salad'>Oder Food</Link></li>
         <li><Link to='/contact'>Contact Us</Link></li>
-        <li><Link to='/login'>Login</Link></li>
         
+
+         {
+            user ? <> <button onClick={handleLogOut} className="btn btn-outline btn-accent">LogOut</button> </> 
+            : 
+            <> <li><Link to='/login'>Login</Link></li></>
+         }        
 
         
 
