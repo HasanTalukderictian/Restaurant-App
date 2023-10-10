@@ -3,23 +3,24 @@ import imgIcon from '../../assests/logo.png';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
 import Swal from 'sweetalert2'
+import { FaShoppingCart } from 'react-icons/fa';
 
 const Navbar = () => {
-    
-    const {user, logout} = useContext(AuthContext);
 
-    const handleLogOut =() =>{
+    const { user, logout } = useContext(AuthContext);
+
+    const handleLogOut = () => {
 
         logout()
-        .then( () =>{})
-        .catch(error => console.log(error));
+            .then(() => { })
+            .catch(error => console.log(error));
         Swal.fire({
             position: 'top-end',
             icon: 'success',
             title: 'Your work has been saved',
             showConfirmButton: false,
             timer: 1500
-          })
+        })
     }
 
     const navOption = <>
@@ -28,15 +29,28 @@ const Navbar = () => {
         <li><Link to='/order/salad'>Oder Food</Link></li>
         <li><Link to='/contact'>Contact Us</Link></li>
         <li><Link to='/secret'>Secret</Link></li>
-        
+        <li>
+            <Link to='/'>
+                <button className="btn gap-2">
+                    <FaShoppingCart></FaShoppingCart>
+                    <div className="badge badge-secondary">+0</div>
+                </button>
+            </Link>
+        </li>
 
-         {
-            user ? <> <button onClick={handleLogOut} className="btn btn-outline btn-accent">LogOut</button> </> 
-            : 
-            <> <li><Link to='/login'>Login</Link></li></>
-         }        
 
-        
+        {
+
+            user ? <>
+                {/* <span>{user?.displayName}</span> */}
+
+
+                <button onClick={handleLogOut} className="btn btn-outline btn-accent">LogOut</button> </>
+                :
+                <> <li><Link to='/login'>Login</Link></li></>
+        }
+
+
 
     </>
     return (

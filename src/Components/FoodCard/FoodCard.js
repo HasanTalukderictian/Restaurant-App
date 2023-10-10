@@ -1,8 +1,13 @@
 import React from 'react';
 
 const FoodCard = ({item}) => {
+    // this item props
     const {image, price, name, recipe} = item;
 
+    const handleAddtoCart =item =>{
+       console.log(item);
+    }
+   
     return (
 
         <div>
@@ -13,7 +18,7 @@ const FoodCard = ({item}) => {
                     <p>{recipe}</p>
                     <p className='text-orange-700'>Price: $ {price}</p>
                     <div className="card-actions justify-center">
-                        <button className="btn btn-outline btn-warning">Add to Cart</button>
+                        <button onClick={() => handleAddtoCart(item)} className="btn btn-outline btn-warning">Add to Cart</button>
                     </div>
                 </div>
             </div>

@@ -10,6 +10,8 @@ import { Helmet } from 'react-helmet-async';
 
 const Order = () => {
     
+   //TODO pagination here.
+
     const categories = ['salad', 'pizza', 'soup','dessert','drinks'];
     const {category} = useParams();
     const initialIndex = categories.indexOf(category);
