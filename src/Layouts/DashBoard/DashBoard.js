@@ -1,6 +1,9 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { FaShoppingCart, FaWallet, FaCalendar, FaHome,  } from 'react-icons/fa';
+import { FaShoppingCart, FaWallet, FaCalendar, FaHome, FaListOl, FaPizzaSlice  } from 'react-icons/fa';
+
+
+
 
 const DashBoard = () => {
     return (
@@ -23,8 +26,8 @@ const DashBoard = () => {
 
                     <div className="divider"></div>
                     <li><NavLink to="/"><FaHome></FaHome>Home</NavLink></li>
-                    <li><NavLink to="/menu">Menu</NavLink></li>
-                    <li><NavLink to='/order/salad'>Order Food</NavLink></li>
+                    <li><NavLink to="/menu"><FaListOl></FaListOl>Menu</NavLink></li>
+                    <li><NavLink to='/order/salad'><FaPizzaSlice></FaPizzaSlice>Order Food</NavLink></li>
                     
                 </ul>
 
