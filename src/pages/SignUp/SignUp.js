@@ -5,6 +5,7 @@ import { AuthContext } from '../../Providers/AuthProviders';
 import { Link, useNavigate } from 'react-router-dom';
 import { updateCurrentUser } from 'firebase/auth';
 import Swal from 'sweetalert2'
+import SocialLogin from '../../Shared/SocialLogin/SocialLogin';
 
 
 
@@ -122,6 +123,7 @@ const SignUp = () => {
                             </div>
                         </form>
                         <Link to='/login'><p><small>Already Have an Account? Login Here</small></p></Link>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div></>
