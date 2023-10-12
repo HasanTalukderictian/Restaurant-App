@@ -32,6 +32,7 @@ const SignUp = () => {
                     .then(() => {
                          
                         const saveUser = {name: data.name, email: data.email}
+                        
                         fetch('http://localhost:4000/users',{
                             method:'POST',
                             headers:{
