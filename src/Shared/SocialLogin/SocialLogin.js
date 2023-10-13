@@ -19,7 +19,7 @@ const SocialLogin = () => {
                 const saveUser = { name: loggedInUser.displayName, email: loggedInUser.email }
 
 
-                fetch('http://localhost:4000/users', {
+                fetch('https://ecommerce-server-oin4da6ix-hasantalukder1234.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'content-type': ' application/json'

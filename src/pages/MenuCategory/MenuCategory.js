@@ -11,7 +11,7 @@ const MenuCategory = () => {
 
 
    useEffect(() => {
-            fetch('http://localhost:4000/menu')
+            fetch('https://ecommerce-server-oin4da6ix-hasantalukder1234.vercel.app/menu')
             .then(res => res.json())
             .then(data=>{
                 const popularItems = data.filter(item => item.category ==='popular');

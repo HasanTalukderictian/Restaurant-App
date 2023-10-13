@@ -23,7 +23,7 @@ const FoodCard = ({item}) => {
 
         const cartItem = { menuitemId: _id, name, price, email:user.email}
 
-         fetch('http://localhost:4000/carts', {
+         fetch('https://ecommerce-server-oin4da6ix-hasantalukder1234.vercel.app/carts', {
             method:'POST',
             headers:{
 
