@@ -29,8 +29,8 @@ const SocialLogin = () => {
                 })
                     .then(res => res.json())
                     .then(() => {
-                        navigate(from, { replace: true });
-                        // navigate('/');
+                        // navigate(from, { replace: true });
+                        navigate('/');
 
                     })
 
