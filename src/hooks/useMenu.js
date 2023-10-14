@@ -5,7 +5,7 @@ const useMenu =() =>{
   const [loading, setLoading] = useState(true);
 
   useEffect(() =>{
-    fetch('https://ecommerce-server-oin4da6ix-hasantalukder1234.vercel.app/menu')
+    fetch('http://localhost:4000/menu')
     .then(res => res.json())
     .then(data => {
         setLoading(false);

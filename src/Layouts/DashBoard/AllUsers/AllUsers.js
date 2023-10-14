@@ -15,7 +15,7 @@ const AllUsers = () => {
     })
 
     const handleMakeAdmin = user =>{
-        fetch(`https://ecommerce-server-oin4da6ix-hasantalukder1234.vercel.app/users/admin/${user._id}`, {
+        fetch(`http://localhost:4000/users/admin/${user._id}`, {
             method: 'PATCH'
         })
         .then(res => res.json())
