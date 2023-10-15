@@ -4,6 +4,8 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import useAxiosSecure from '../../../hooks/useAxiousSecure';
 import useAuth from '../../../hooks/useAuth';
+import './CheckOutForm.css';
+
 
 const CheckOutForm = ({price, cart}) => {
 
@@ -83,10 +85,14 @@ const CheckOutForm = ({price, cart}) => {
             setTransactionId(paymentIntent.id);
 
           const payment = {
-            email: user?.email, transactionId: paymentIntent.id,
+            email: user?.email,
+             transactionId: paymentIntent.id,
             price,
+            date: new Date(),
              quantity: cart.length,
-             items: cart.map(item => item._id),
+             status : 'service pending',
+             cartItems: cart.map(item => item._id),
+             menuItems: cart.map(item=> item.menuItemId),
              itemsName: cart.map(item => item.name)
           }
           axiosSecure.post('/payments', payment)
