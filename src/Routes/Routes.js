@@ -17,6 +17,7 @@ import AllUsers from "../Layouts/DashBoard/AllUsers/AllUsers";
 import AddItems from "../Layouts/DashBoard/AddItems";
 import AdminRoute from "./AdminRoutes";
 import ManageItems from "../Layouts/DashBoard/ManageItems/ManageItems";
+import Payment from "../Layouts/DashBoard/Payment/Payment";
 
 export const router = createBrowserRouter([
   {
@@ -63,8 +64,14 @@ export const router = createBrowserRouter([
         element:<MyCart></MyCart>
       },
       {
+        path:'payment',
+        element:<Payment></Payment>
+      },
+
+      // admin Routes
+      {
         path:'allusers',
-        element:<AllUsers></AllUsers>
+        element:<AdminRoute><AllUsers></AllUsers></AdminRoute>
       },
       {
         path:'addItem',
